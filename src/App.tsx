@@ -1,15 +1,13 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import useFetchUsers from "./hooks/useFetchUsers";
+import UsersTable from "./components/UsersTable/UsersTable";
 
 function App() {
-  const { data, error, loading } = useFetchUsers("https://jsonplaceholder.typicode.com/users");
-  console.log(data, error, loading)
 
-  
-
-  return <div className="App">oi</div>;
+  return <div className="App">
+    <UsersTable />
+  </div>;
 }
 
 export default App;
