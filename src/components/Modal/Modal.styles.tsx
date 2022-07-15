@@ -26,7 +26,7 @@ export const ModalElement = styled.div`
   position: relative;
   width: 90%;
   background-color: white;
-  padding: 16px;
+  padding: 16px 8px;
   border-radius: 20px;
   max-width: 600px;
 `;
