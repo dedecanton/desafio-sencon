@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { User } from "../../types/users.types";
 import getUserEnterpise from "../../utils/getUserEnterpise";
+import Modal from "../Modal/Modal";
 import { TableItem, TableRowItem } from "./TableRow.styles";
 
 export type TableRowTypes = {
@@ -9,11 +10,21 @@ export type TableRowTypes = {
 };
 
 const TableRow = ({
-  user: { address, email, id, name, phone },
+  user: { address, email, id, name, phone, username },
   index,
 }: TableRowTypes) => {
   const userAddress = `${address.street}, ${address.suite} ${address.zipcode}`;
   const enterpise = getUserEnterpise(index);
+  const [isShowingModal, setIsShowingModal] = useState<boolean>(false);
+
+  const handleCloseModal = () => {
+    setIsShowingModal(false);
+  };
+
+  const handleShowModal = () => {
+    setIsShowingModal(true)
+  }
+
 
   const tableItems = [
     {dataLabel: 'Nome: ', item:name},
@@ -26,7 +37,8 @@ const TableRow = ({
   
   return (
     <TableRowItem>
-      {tableItems.map(({dataLabel, item}, index) => <TableItem data-label={dataLabel} key={index}>{item}</TableItem>)}
+      {tableItems.map(({dataLabel, item}, itemIndex) => <TableItem onClick={handleShowModal} data-label={dataLabel} key={itemIndex}>{item}</TableItem>)}
+      <Modal username={username} id={id} index={index} isShowing={isShowingModal} onClose={handleCloseModal} />
     </TableRowItem>
   );
 };
