@@ -30,6 +30,12 @@ Por fim, como adicional, uma barra de pesquisa foi adicionada para filtrar os us
 
 - Deploy na vercel: [https://desafio-sencon.vercel.app/](https://desafio-sencon.vercel.app/)
 
+
+https://user-images.githubusercontent.com/67431433/179227802-167d6bd4-be6e-41d0-aa89-b51988299355.mp4
+
+
+
+
 ## Tecnologias/bibliotecas utilizadas
 
 - ReactJS
@@ -38,8 +44,8 @@ Por fim, como adicional, uma barra de pesquisa foi adicionada para filtrar os us
 
 ## Como rodar o projeto
 
-1. Clonar repositório (git clone [https://github.com/dedecanton/desafio-front-dragon.git](https://github.com/dedecanton/desafio-front-dragon.git))
+1. Clonar repositório (git clone [https://github.com/dedecanton/desafio-sencon.git](https://github.com/dedecanton/desafio-sencon.git))
 2. Entrar na pasta do projeto
-3. Instalar as dependências ( rodar *yarn* *no terminal do projeto* )
-4. Para rodar em ambiente de desenvolvimento, rode o script yarn *start*
-5. Para fazer build da aplicação, rode o script yarn *build*
+3. Instalar as dependências ( *rodar __**yarn**__ no terminal do projeto* )
+4. Para rodar em ambiente de desenvolvimento, rode o script __**yarn start**__
+5. Para fazer build da aplicação, rode o script __**yarn build**__
