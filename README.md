@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# Tabela Sencon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Explicação do projeto
 
-## Available Scripts
+O projeto consiste em uma aplicação que faz requisição para o endpoint “https://jsonplaceholder.typicode.com/users”, e mostra os dados em uma tabela que contém os campos:
 
-In the project directory, you can run:
+- Nome
+- Email
+- Telefone
+- Endereço completo
+- Cidade
+- Empresa
 
-### `npm start`
+Para a definição da empresa, foi solicitado para implementar a seguinte lógica:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- caso o índice do usuário for divisível por 3, mostrar a palavra “TC”
+- caso o índice do usuário for divisível por 5, mostrar a palavra “SENCON”
+- caso o índice do usuário for divisível por 3 e 5, mostrar a palavra “TC/ SENCON”
+- se não satisfazer nenhuma condição, mostrar a palavra “Sem empresa”
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Além disso, ao clicar em uma das linhas da tabela, abre um modal que consta os seguintes dados:
 
-### `npm test`
+- Username
+- Id
+- Índice da linha
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Por fim, como adicional, uma barra de pesquisa foi adicionada para filtrar os usuários pelo seu nome, email e/ou cidade.
 
-### `npm run build`
+## Demonstração da aplicação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Deploy na vercel: [https://desafio-sencon.vercel.app/](https://desafio-sencon.vercel.app/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tecnologias/bibliotecas utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ReactJS
+- Typescript
+- Styled Components
 
-### `npm run eject`
+## Como rodar o projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clonar repositório (git clone [https://github.com/dedecanton/desafio-front-dragon.git](https://github.com/dedecanton/desafio-front-dragon.git))
+2. Entrar na pasta do projeto
+3. Instalar as dependências ( rodar *yarn* *no terminal do projeto* )
+4. Para rodar em ambiente de desenvolvimento, rode o script yarn *start*
+5. Para fazer build da aplicação, rode o script yarn *build*
