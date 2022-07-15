@@ -1,13 +1,5 @@
-export type User = {
-    name: string;
-    email: string;
-    phone: string;
-    address: string;
-    city: string;
-    company: string;
-}
 
-export type UserFetched = {
+export type User = {
     name:string;
     email:string;
     phone: string;
@@ -17,10 +9,11 @@ export type UserFetched = {
         city:string;
         zipcode:string;
     };
+    id: number;
 }
 
 export type UseFetchUsersType = {
-    data: UserFetched[];
+    data: User[];
     loading: boolean;
     error: Error | null
 }
