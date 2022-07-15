@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
-import { UseFetchUsersType, UserFetched } from "../types/users.types";
+import { UseFetchUsersType, User } from "../types/users.types";
 
 export default function useFetchUsers(URL: string): UseFetchUsersType {
-  const [data, setData] = useState<UserFetched[]>([]);
+  const [data, setData] = useState<User[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | null>(null);
 
@@ -11,14 +11,14 @@ export default function useFetchUsers(URL: string): UseFetchUsersType {
     try {
       const response = await fetch(URL);
       if (!response.ok) {
-        throw new Error("Fetch data failed!");
+        throw new Error("Houve um problema ao buscar os usuários! Tente novamente mais tarde!");
       }
       const dataFetched = await response.json();
-      const dataFiltered: UserFetched[] = [];
+      const dataFiltered: User[] = [];
 
       dataFetched.forEach((data: any) => {
-        const { name, email, phone, address } = data;
-        dataFiltered.push({ name, email, phone, address });
+        const { name, email, phone, address, id}:User = data;
+        dataFiltered.push({ name, email, phone, address, id });
       });
 
       setData(dataFiltered);
