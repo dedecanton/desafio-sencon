@@ -1,13 +1,18 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import UsersTable from "./components/UsersTable/UsersTable";
+import { AppContainer } from "./App.styles";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
-
-  return <div className="App">
-    <UsersTable />
-  </div>;
+  return (
+    <AppContainer>
+      <Header/>
+      <UsersTable />
+      <Footer/>
+    </AppContainer>
+  );
 }
 
 export default App;
