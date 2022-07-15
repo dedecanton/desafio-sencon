@@ -17,8 +17,8 @@ export default function useFetchUsers(URL: string): UseFetchUsersType {
       const dataFiltered: User[] = [];
 
       dataFetched.forEach((data: any) => {
-        const { name, email, phone, address, id}:User = data;
-        dataFiltered.push({ name, email, phone, address, id });
+        const { name, email, phone, address, id, username}:User = data;
+        dataFiltered.push({ name, email, phone, address, id, username });
       });
 
       setData(dataFiltered);

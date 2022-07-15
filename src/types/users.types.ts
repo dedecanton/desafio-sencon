@@ -10,6 +10,7 @@ export type User = {
         zipcode:string;
     };
     id: number;
+    username: string;
 }
 
 export type UseFetchUsersType = {
